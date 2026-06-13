@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FLAMMA SKY BBQ &amp; Grill</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .hero {
+      background: #0f0500;
+      text-align: center;
+      padding: 7rem 2rem 5rem;
+      border-bottom: 2px solid #c8732a;
+    }
+    .hero .tagline { font-size: 11px; color: #c8732a; letter-spacing: 4px; margin-bottom: 1.5rem; font-family: 'Segoe UI', sans-serif; }
+    .hero h1 { color: #fff; font-size: 54px; letter-spacing: 4px; line-height: 1.15; margin-bottom: 1.5rem; }
+    .hero h1 em { color: #c8732a; font-style: italic; }
+    .hero p { color: #aaa; font-size: 15px; max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.9; font-family: 'Segoe UI', sans-serif; }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .feat-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: #0f0500;
+      border-bottom: 2px solid #c8732a;
+    }
+    .feat-item { padding: 2.5rem 1.5rem; text-align: center; border-right: 1px solid #2a1200; }
+    .feat-item:last-child { border-right: none; }
+    .feat-num { font-size: 38px; color: #c8732a; font-weight: 700; }
+    .feat-label { font-size: 11px; color: #888; letter-spacing: 2px; margin-top: 6px; font-family: 'Segoe UI', sans-serif; }
+
+    .specialties { padding: 5rem 2rem; max-width: 1080px; margin: 0 auto; }
+    .cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .spec-card { background: #fff; border: 1px solid #ead5bb; border-radius: 4px; overflow: hidden; }
+    .spec-img {
+      height: 160px;
+      background: #1a0a00;
+      border-bottom: 2px solid #c8732a;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .spec-img img { width: 100%; height: 100%; object-fit: cover; }
+    .spec-img .ph { font-size: 52px; }
+    .spec-body { padding: 1.3rem 1.5rem; }
+    .spec-body h3 { font-size: 15px; color: #0f0500; margin-bottom: 6px; }
+    .spec-body p { font-size: 13px; color: #777; line-height: 1.7; font-family: 'Segoe UI', sans-serif; }
+
+    .quote-band {
+      background: #0f0500;
+      padding: 5rem 2rem;
+      text-align: center;
+      border-top: 2px solid #c8732a;
+      border-bottom: 2px solid #c8732a;
+    }
+    .quote-band blockquote { font-size: 22px; color: #fff; font-style: italic; max-width: 640px; margin: 0 auto; line-height: 1.8; }
+    .quote-band cite { display: block; margin-top: 1.2rem; font-size: 11px; color: #c8732a; letter-spacing: 3px; font-style: normal; font-family: 'Segoe UI', sans-serif; }
+
+    .cta-section { padding: 5rem 2rem; text-align: center; }
+    .cta-section h2 { font-size: 30px; margin-bottom: 1rem; }
+    .cta-section p { font-size: 14px; color: #777; font-family: 'Segoe UI', sans-serif; margin-bottom: 2rem; line-height: 1.8; }
+
+    @media(max-width: 700px) {
+      .hero h1 { font-size: 34px; }
+      .cards3 { grid-template-columns: 1fr; }
+      .feat-strip { grid-template-columns: 1fr; }
+      .feat-item { border-right: none; border-bottom: 1px solid #2a1200; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">FLAMMA SKY<span>BBQ &amp; GRILL</span></div>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="booking.php">Book a Table</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="tagline">EST. 2018 &nbsp;&middot;&nbsp; HYDERABAD</p>
+  <h1>Fire. Smoke.<br><em>Flavor.</em></h1>
+  <p>At FLAMMA SKY, every dish is a slow-crafted ritual — charcoal-kissed, spice-blessed, and served with soul.</p>
+  <div class="hero-btns">
+    <a href="booking.php" class="btn-gold">Reserve a Table</a>
+    <a href="menu.html" class="btn-outline">View Our Menu</a>
+  </div>
+</section>
+
+<div class="feat-strip">
+  <div class="feat-item"><div class="feat-num">7+</div><div class="feat-label">YEARS OF CRAFT</div></div>
+  <div class="feat-item"><div class="feat-num">50+</div><div class="feat-label">MENU ITEMS</div></div>
+  <div class="feat-item"><div class="feat-num">4.8&#9733;</div><div class="feat-label">GUEST RATING</div></div>
+</div>
+
+<section class="specialties">
+  <div class="sec-header">
+    <div class="kicker">OUR SPECIALTIES</div>
+    <h2>Crafted with Fire, Served with Pride</h2>
+  </div>
+  <div class="cards3">
+    <div class="spec-card">
+      <div class="spec-img">
+        <img src="images/mixed-grill.jpeg" alt="mixed-grill">
+      </div>
+      <div class="spec-body">
+        <h3>Signature Mixed Grill</h3>
+        <p>Our champion platter — chicken, mutton &amp; prawns slow-grilled to perfection with our house spice blend.</p>
+      </div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-img">
+        <img src="images/ribs.jpeg" alt="smoked ribs">
+  
+      </div>
+      <div class="spec-body">
+        <h3>Smoked Mutton Ribs</h3>
+        <p>6-hour slow smoke, fall-off-bone tenderness finished with our signature tangy glaze.</p>
+      </div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-img">
+      <img src="images/seekh.jpeg" alt="seekh kebab">
+        
+      </div>
+      <div class="spec-body">
+        <h3>Tandoori Seekh Platter</h3>
+        <p>Minced lamb seekh kebabs, clay-oven fired with aromatic herbs and spices. A timeless classic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="quote-band">
+  <blockquote>"Where smoke meets spice, and every meal becomes a memory."</blockquote>
+  <cite>—FLAMMA SKY PROMISE</cite>
+</div>
+
+<section class="cta-section">
+  <div class="kicker">JOIN US FOR A MEAL</div>
+  <h2>Your Table Awaits at Flamma Sky</h2>
+  <p>Open every day, 12 PM to 11 PM.<br>Walk in or book ahead to secure your seat.</p>
+  <a href="booking.php" class="btn-gold">Make a Reservation</a>
+</section>
+
+<div class="contact-band">
+  <div class="cb-item"><div class="label">PHONE</div><div class="val">+91 9642410067</div></div>
+  <div class="cb-item"><div class="label">EMAIL</div><div class="val">flammaskyva@gmail.com</div></div>
+  <div class="cb-item"><div class="label">HOURS</div><div class="val">12 PM – 11 PM, All Days</div></div>
+</div>
+
+<footer>
+  <p>&copy; 2026 <span>FLAMMA SKY BBQ &amp; Grill</span> &nbsp;&middot;&nbsp;
+  <a href="tel:+919642410067">+91 9642410067</a> &nbsp;&middot;&nbsp;
+  <a href="mailto:flammaskyva@gmail.com">flammaskyva@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

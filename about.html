@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FLAMMA SKY | About Us</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .hero { background: #0f0500; padding: 4.5rem 2rem; text-align: center; border-bottom: 2px solid #c8732a; }
+    .hero h1 { color: #fff; font-size: 38px; letter-spacing: 3px; margin-top: 10px; }
+
+    /* STORY */
+    .story {
+      display: grid; grid-template-columns: 1fr 1fr;
+      max-width: 980px; margin: 4rem auto; padding: 0 2rem; gap: 3.5rem; align-items: center;
+    }  
+    .story-img {
+      border-radius: 4px; overflow: hidden; border: 2px solid #c8732a;
+      height: 360px; background: #1a0a00;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .story-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .img-ph { text-align: center; color: #c8732a; font-family: 'Segoe UI', sans-serif; padding: 2rem; }
+    .img-ph .icon { font-size: 52px; display: block; margin-bottom: 12px; }
+    .img-ph small { font-size: 11px; color: #555; letter-spacing: 1px; }
+    .story-text .kicker { margin-bottom: 10px; }
+    .story-text h2 { font-size: 28px; color: #0f0500; margin-bottom: 1.2rem; letter-spacing: 1px; }
+    .story-text p { font-size: 14px; color: #555; line-height: 1.9; font-family: 'Segoe UI', sans-serif; margin-bottom: 14px; }
+
+    /* VALUES */
+    .values { background: #0f0500; padding: 4.5rem 2rem; }
+    .values .sec-header h2 { color: #fff; }
+    .vals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 920px; margin: 2.5rem auto 0; }
+    .val-card { border: 1px solid #3a1a00; border-radius: 4px; padding: 2rem 1.5rem; text-align: center; }
+    .val-icon { width: 52px; height: 52px; border-radius: 50%; background: #c8732a; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; }
+    .val-icon svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.8; }
+    .val-card h3 { color: #fff; font-size: 15px; letter-spacing: 1px; margin-bottom: 8px; }
+    .val-card p { color: #999; font-size: 13px; line-height: 1.8; font-family: 'Segoe UI', sans-serif; }
+
+    /* GALLERY */
+    .gallery { padding: 4.5rem 2rem; max-width: 980px; margin: 0 auto; }
+    .gal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 2.5rem; }
+    .gal-item {
+      border-radius: 4px; overflow: hidden; border: 1px solid #ead5bb;
+      height: 190px; background: #1a0a00;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gal-ph { text-align: center; color: #c8732a; font-family: 'Segoe UI', sans-serif; }
+    .gal-ph .icon { font-size: 30px; display: block; margin-bottom: 6px; }
+    .gal-ph span { font-size: 10px; letter-spacing: 1px; color: #666; }
+
+    /* TIMELINE */
+    .timeline-section { padding: 4rem 2rem; background: #fdf0e4; border-top: 1px solid #ead5bb; }
+    .timeline { max-width: 700px; margin: 2.5rem auto 0; }
+    .tl-item { display: flex; gap: 1.5rem; margin-bottom: 2.5rem; }
+    .tl-year { min-width: 60px; font-size: 18px; color: #c8732a; font-weight: 700; padding-top: 2px; font-family: 'Segoe UI', sans-serif; }
+    .tl-line { display: flex; flex-direction: column; align-items: center; }
+    .tl-dot { width: 13px; height: 13px; border-radius: 50%; background: #c8732a; flex-shrink: 0; margin-top: 5px; }
+    .tl-bar { width: 2px; background: #ead5bb; flex: 1; margin-top: 4px; }
+    .tl-item:last-child .tl-bar { display: none; }
+    .tl-content h3 { font-size: 15px; color: #0f0500; margin-bottom: 4px; }
+    .tl-content p { font-size: 13px; color: #777; line-height: 1.7; font-family: 'Segoe UI', sans-serif; }
+
+    /* TEAM */
+    .team { padding: 4.5rem 2rem; }
+    .team .sec-header h2 { color: #0f0500; }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 920px; margin: 2.5rem auto 0; }
+    .team-card { background: #fff; border: 1px solid #ead5bb; border-radius: 4px; padding: 2rem 1.5rem; text-align: center; }
+    .avatar {
+      width: 70px; height: 70px; border-radius: 50%; background: #c8732a;
+      margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 22px; font-family: 'Segoe UI', sans-serif; font-weight: 700;
+      border: 3px solid #ead5bb; overflow: hidden;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .team-card h3 { font-size: 15px; color: #0f0500; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .team-card .role { font-size: 12px; color: #888; font-family: 'Segoe UI', sans-serif; margin-bottom: 4px; }
+    .team-card .exp { font-size: 11px; color: #c8732a; font-family: 'Segoe UI', sans-serif; }
+
+    @media(max-width: 700px) {
+      .story { grid-template-columns: 1fr; }
+      .vals-grid, .team-grid { grid-template-columns: 1fr; }
+      .gal-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">FLAMMA SKY<span>BBQ &amp; GRILL</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="booking.php">Book a Table</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="kicker">OUR STORY</div>
+  <h1>Where Flames Meet the Sky</h1>
+   <p>Crafting unforgettable dining experiences through fire, flavor, and atmosphere.</p>
+</section>
+
+
+<section class="story">
+  <div class="story-img">
+    <img src="images/restaurant.jpeg" alt="FLAMMA SKY Restaurant">
+  </div>
+  <div class="story-text">
+    <div class="kicker">OUR BEGINNING</div>
+    <h2>A Passion Forged in Flame</h2>
+    <p>
+            FLAMMA SKY was founded in 2018 with a vision to bring together
+            exceptional food, warm hospitality, and unforgettable ambience.
+        </p>
+
+        <p>
+            Inspired by the art of fire-grilled cooking, our chefs transform
+            fresh ingredients into bold and memorable flavors that delight every guest.
+        </p>
+
+        <p>
+            From intimate indoor dining to our open-air terrace beneath the sky,
+            every corner of FLAMMA SKY is designed to create moments worth sharing.
+        </p>
+
+        <p>
+            Today, we continue to celebrate food, family, and community—one
+            perfectly crafted meal at a time.
+        </p>
+  </div>
+</section>
+
+<section class="values">
+  <div class="sec-header">
+    <div class="kicker">WHAT WE STAND FOR</div>
+    <h2>Our Core Values</h2>
+  </div>
+  <div class="vals-grid">
+    <div class="val-card">
+      <div class="val-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      </div>
+      <h3>Authenticity</h3>
+      <p>Every recipe is rooted in tradition. No shortcuts, no compromise — just honest, fire-cooked food the way it was always meant to be made.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <h3>Hospitality</h3>
+      <p>You are family the moment you walk through our doors. Warmth is the first ingredient in everything we serve.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>Excellence</h3>
+      <p>We never stop refining. Every dish, every season — we push to be better than yesterday and worthy of your return.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="sec-header">
+    <div class="kicker">INSIDE FLAMMA SKY</div>
+    <h2>A Glimpse of Our World</h2>
+  </div>
+  <div class="gal-grid">
+    <div class="gal-item">
+      <img src="images/grill.jpeg" alt="The Open Grill">
+    </div>
+    <div class="gal-item">
+      <img src="images/dining.jpeg" alt="dining hall">
+    </div>
+    <div class="gal-item">
+      <img src="images/platter.jpeg" alt="Signature Platter">
+    </div>
+    <div class="gal-item">
+      <img src="images/chef.jpeg" alt="Our Chef">
+    </div>
+    <div class="gal-item">
+      <img src="images/outdoor.jpeg" alt="Outdoor Seating">
+    </div>
+    <div class="gal-item">
+      <img src="images/kebab.jpeg" alt="Kebabs">
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="sec-header">
+    <div class="kicker">OUR JOURNEY</div>
+    <h2 style="color:#0f0500">From a Dream to a Landmark</h2>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-year">2018</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-content"><h3>The First Spark</h3><p>FLAMMA SKY opens its doors in Hyderabad with a small menu and a big vision for honest, fire-cooked food.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2020</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-content"><h3>Glowing the Flame</h3><p>We add our signature outdoor BBQ pit and expand the menu to 30+ items, welcoming our first 500 loyal guests.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2022</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-content"><h3>Hyderabad's Favourite</h3><p>FLAMMA SKY is voted one of the city's top BBQ restaurants with a 4.8-star guest rating and a growing reputation.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2024</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-content"><h3>Innovation of  the Menu</h3><p>New menu additions, redesigned dining hall, and the same soul — FLAMMA SKY continues to grow, one great meal at a time.</p></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2026</div>
+      <div class="tl-line"><div class="tl-dot"></div></div>
+      <div class="tl-content"><h3>The Future Beckons</h3><p>Expanded our digital presence,refined our offerings,and continued creating unforgettable moments for every guest.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="sec-header">
+    <div class="kicker">MEET THE TEAM</div>
+    <h2>The Faces Behind the Flame</h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card">
+      <!-- <img src="images/ravi.jpg"> inside .avatar to show photo -->
+      <div class="avatar">RK</div>
+      <h3>Ravi Kumar</h3>
+      <div class="role">Head Chef &amp; Co-founder</div>
+      <div class="exp">18 years experience</div>
+    </div>
+    <div class="team-card">
+      <div class="avatar">PS</div>
+      <h3>Priya Sharma</h3>
+      <div class="role">Restaurant Manager</div>
+      <div class="exp">Guest Experience Lead</div>
+    </div>
+    <div class="team-card">
+      <div class="avatar">AK</div>
+      <h3>Arjun Kaur</h3>
+      <div class="role">Pitmaster</div>
+      <div class="exp">Smoke &amp; Grill Specialist</div>
+    </div>
+  </div>
+</section>
+
+<div class="contact-band">
+  <div class="cb-item"><div class="label">PHONE</div><div class="val">+91 9642410067</div></div>
+  <div class="cb-item"><div class="label">EMAIL</div><div class="val">flammaskyva@gmail.com</div></div>
+  <div class="cb-item"><div class="label">HOURS</div><div class="val">12 PM – 11 PM, All Days</div></div>
+</div>
+
+<footer>
+  <p>&copy; 2026 <span>FLAMMA SKY BBQ &amp; Grill</span> &nbsp;&middot;&nbsp;
+  <a href="tel:+919642410067">+91 9642410067</a> &nbsp;&middot;&nbsp;
+  <a href="mailto:flammaskyva@gmail.com">flammaskyva@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

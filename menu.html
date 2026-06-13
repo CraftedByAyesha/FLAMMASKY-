@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FLAMMA SKY – Menu</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .hero { background: #0f0500; padding: 4.5rem 2rem; text-align: center; border-bottom: 2px solid #c8732a; }
+    .hero h1 { color: #fff; font-size: 38px; letter-spacing: 3px; margin-top: 10px; }
+
+    .menu-body { padding: 3.5rem 2rem; max-width: 980px; margin: 0 auto; }
+    .menu-section { margin-bottom: 3rem; }
+    .menu-section h3 {
+      font-size: 11px; color: #c8732a; letter-spacing: 3px;
+      margin-bottom: 1.2rem; padding-bottom: 10px;
+      border-bottom: 1px solid #ead5bb;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .mi {
+      background: #fff; border: 1px solid #ead5bb; border-radius: 4px;
+      padding: 1rem 1.25rem; display: flex;
+      justify-content: space-between; align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+    .mi:hover { border-color: #c8732a; }
+    .mi h4 { font-size: 14px; color: #0f0500; margin-bottom: 4px; }
+    .mi p { font-size: 12px; color: #888; line-height: 1.6; font-family: 'Segoe UI', sans-serif; }
+    .pri { font-size: 16px; color: #c8732a; font-weight: 700; font-family: 'Segoe UI', sans-serif; white-space: nowrap; margin-left: 12px; padding-top: 2px; }
+
+    @media(max-width: 600px) { .menu-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">FLAMMA SKY<span>BBQ &amp; GRILL</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html" class="active">Menu</a>
+    <a href="booking.php">Book a Table</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="kicker">CRAFTED WITH FIRE</div>
+  <h1>Our Menu</h1>
+</section>
+
+<div class="contact-band">
+  <div class="cb-item"><div class="label">PHONE</div><div class="val">+91 9642410067</div></div>
+  <div class="cb-item"><div class="label">EMAIL</div><div class="val">flammaskyva@gmail.com</div></div>
+  <div class="cb-item"><div class="label">HOURS</div><div class="val">12 PM – 11 PM, All Days</div></div>
+</div>
+
+<div class="menu-body">
+
+  <div class="menu-section">
+    <h3>STARTERS</h3>
+    <div class="menu-grid">
+      <div class="mi"><div><h4>Tandoori Chicken Tikka</h4><p>Marinated in smoky spices, grilled in clay oven</p><span class="tag nonveg">Non-veg</span></div><div class="pri">&#x20B9;320</div></div>
+      <div class="mi"><div><h4>Paneer BBQ Skewers</h4><p>Cottage cheese with bell peppers, charcoal grilled</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;260</div></div>
+      <div class="mi"><div><h4>Seekh Kebab</h4><p>Minced lamb with herbs, cooked on open fire</p><span class="tag nonveg">Non-veg</span></div><div class="pri">&#x20B9;340</div></div>
+      <div class="mi"><div><h4>Mushroom Galouti</h4><p>Melt-in-mouth mushroom patties, smoked butter</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;220</div></div>
+      <div class="mi"><div><h4>Prawn Koliwada</h4><p>Coastal-style prawns, fried in spiced batter</p><span class="tag nonveg">Non-veg</span></div><div class="pri">&#x20B9;390</div></div>
+      <div class="mi"><div><h4>Corn &amp; Cheese Tikka</h4><p>Sweet corn, mozzarella, peppers on skewer</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;200</div></div>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3>BBQ MAINS</h3>
+    <div class="menu-grid">
+      <div class="mi"><div><h4>Whole BBQ Chicken</h4><p>Slow roasted half bird with house BBQ sauce</p><span class="tag nonveg">Non-veg</span></div><div class="pri">&#x20B9;650</div></div>
+      <div class="mi"><div><h4>Smoked Mutton Ribs</h4><p>Fall-off-bone ribs, 6-hour smoke, tangy glaze</p><span class="tag nonveg">Non-veg</span></div><div class="pri">&#x20B9;780</div></div>
+      <div class="mi"><div><h4>Flamma sky Mixed Grill Platter</h4><p>Chicken, mutton, prawn — signature assortment</p><span class="tag nonveg">Non-veg</span></div><div class="pri">&#x20B9;950</div></div>
+      <div class="mi"><div><h4>Veg BBQ Platter</h4><p>Paneer, mushroom, corn, broccoli, smoky marinade</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;480</div></div>
+      <div class="mi"><div><h4>Grilled Fish Steak</h4><p>Fresh catch, herb-marinated, flame-grilled</p><span class="tag nonveg">Non-veg</span></div><div class="pri">&#x20B9;720</div></div>
+      <div class="mi"><div><h4>Stuffed Bell Pepper BBQ</h4><p>Roasted peppers filled with spiced rice &amp; cheese</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;360</div></div>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3>BREADS &amp; SIDES</h3>
+    <div class="menu-grid">
+      <div class="mi"><div><h4>Tandoori Roti</h4><p>Whole wheat, baked fresh in tandoor</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;40</div></div>
+      <div class="mi"><div><h4>Garlic Naan</h4><p>Leavened bread, garlic butter finish</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;60</div></div>
+      <div class="mi"><div><h4>Coleslaw &amp; Fries</h4><p>Creamy slaw with seasoned crispy fries</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;160</div></div>
+      <div class="mi"><div><h4>Mint Chutney &amp; Raita</h4><p>House-made accompaniments, served fresh</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;60</div></div>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <h3>BEVERAGES</h3>
+    <div class="menu-grid">
+      <div class="mi"><div><h4>Mango Lassi</h4><p>Fresh mango, thick yoghurt, hint of cardamom</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;120</div></div>
+      <div class="mi"><div><h4>Masala Chai</h4><p>Spiced milk tea, our signature blend</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;60</div></div>
+      <div class="mi"><div><h4>Fresh Lime Soda</h4><p>Sweet or salted, with a zesty finish</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;80</div></div>
+      <div class="mi"><div><h4>Mocktail of the Day</h4><p>Ask your server for today's seasonal mix</p><span class="tag veg">Veg</span></div><div class="pri">&#x20B9;140</div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="contact-band">
+  <div class="cb-item"><div class="label">RESERVATIONS</div><div class="val"><a href="booking.php" style="color:#c8732a;text-decoration:none">Book Your Table &rarr;</a></div></div>
+</div>
+
+<footer>
+  <p>&copy; 2026 <span>FLAMMA SKY BBQ &amp; Grill</span> &nbsp;&middot;&nbsp;
+  <a href="tel:+919642410067">+91 9642410067</a> &nbsp;&middot;&nbsp;
+  <a href="mailto:flammaskyva@gmail.com">flammaskyva@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
